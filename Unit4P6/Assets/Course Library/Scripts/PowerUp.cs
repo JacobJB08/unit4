@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum PowerUpType { None, Pushback, Rockets }
 
-public class RotateCamera : MonoBehaviour
+public class PowerUp : MonoBehaviour
 {
-    public float rotationSpeed;
+    public PowerUpType powerUpType;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,6 @@ public class RotateCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Fire1");
-        transform.Rotate(Vector3.up, -horizontalInput * rotationSpeed * Time.deltaTime);
+        
     }
 }
