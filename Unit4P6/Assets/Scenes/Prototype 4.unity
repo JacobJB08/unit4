@@ -385,7 +385,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6738b3ece100d7f4880bc6ef01286ff9, type: 2}
+  - {fileID: 2100000, guid: e6e6f7a3c9f4839409af1eae15839382, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,6 +474,10 @@ MonoBehaviour:
   powerupIndicator: {fileID: 1039354721}
   currentPowerUp: 0
   rocketPrefab: {fileID: 1112784070323572089, guid: 19260458c71db6d40ab793db6c9afd83, type: 3}
+  hangTime: 0.5
+  smashSpeed: 25
+  explosionForce: 100
+  explosionRadius: 7
 --- !u!1 &801327442
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +515,7 @@ MonoBehaviour:
   powerupPrefabs:
   - {fileID: 3138234370404392782, guid: dd9d33ad7db6edb46b07f91f5e573e9f, type: 3}
   - {fileID: 3138234370404392782, guid: 4effad620e3aabc448c1183cc17b38a0, type: 3}
+  - {fileID: 6886266561362304953, guid: 464d50a5210041c47b950653c075f74b, type: 3}
 --- !u!4 &801327444
 Transform:
   m_ObjectHideFlags: 0

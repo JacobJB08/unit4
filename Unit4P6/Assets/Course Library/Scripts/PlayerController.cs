@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     private GameObject focalPoint;
     public bool hasPowerup;
-    private float powerupStrength = 31.5f;
+    private float powerupStrength = 40f;
     public GameObject powerupIndicator;
     public PowerUpType currentPowerUp = PowerUpType.None;
     public GameObject rocketPrefab;
