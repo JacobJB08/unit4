@@ -14,7 +14,8 @@ public class PlayerControllerX : MonoBehaviour
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
     private float powerupStrength = 25; // how hard to hit enemy with powerup
-    
+    private Coroutine powerupCooldown;
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
@@ -41,13 +42,19 @@ public class PlayerControllerX : MonoBehaviour
             Destroy(other.gameObject);
             hasPowerup = true;
             powerupIndicator.SetActive(true);
+
+            if (powerupCooldown != null)
+            {
+                StopCoroutine(powerupCooldown);
+            }
+            powerupCooldown = StartCoroutine(PowerupCooldown());
         }
     }
 
     // Coroutine to count down powerup duration
     IEnumerator PowerupCooldown()
     {
-        yield return new WaitForSeconds(powerUpDuration);
+        yield return new WaitForSeconds(5);
         hasPowerup = false;
         powerupIndicator.SetActive(false);
     }
